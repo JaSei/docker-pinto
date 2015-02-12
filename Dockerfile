@@ -10,10 +10,10 @@ RUN apt-get install -y pinto
 VOLUME ["/var/lib/pinto"]
 EXPOSE 3111
 
-COPY ./docker_entrypoint.pl /
-
 ENV PINTO_REPOSITORY_ROOT /var/lib/pinto
 ENV PINTO_USERNAME pinto
+
+COPY ./docker_entrypoint.pl /
 
 ENTRYPOINT ["/docker_entrypoint.pl"]
 CMD ["pintod"]

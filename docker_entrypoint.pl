@@ -13,9 +13,9 @@ if ($ARGV[0] eq 'pintod') {
         die 'pintod have must specify root dir';
     }
     
-    if (!-d $root_path) {
-        mkdir $root_path;
-        system "pinto -r $root_path init";
+    mkdir($root_path);
+    if (!-d "$root_path/modules") {
+	system "pinto -r $root_path init";
     }
 }
 
