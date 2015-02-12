@@ -2,7 +2,8 @@
 
 ## Installation
  * [Install Docker](https://docs.docker.com/installation/)
-### Dockerfile
+
+### dockerfile
  * Clone this repo
  * Build image with the commands like:
    `docker build --tag pinto .`
