@@ -7,8 +7,8 @@ After=docker.service
 TimeoutStartSec=0
 ExecStartPre=-/usr/bin/docker kill pintod
 ExecStartPre=-/usr/bin/docker rm pintod
-ExecStartPre=/usr/bin/docker avastsoftware/pinto
-ExecStart=/usr/bin/docker run --name pintod -v /var/lib/pinto:/var/lib/pinto -p3111:3111 avastsoftware/pinto
+ExecStartPre=/usr/bin/docker pull avastsoftware/pinto
+ExecStart=/usr/bin/docker run --name pintod -v /var/lib/pinto:/var/lib/pinto -p 3111:3111 avastsoftware/pinto
 
 [Install]
 WantedBy=multi-user.target
