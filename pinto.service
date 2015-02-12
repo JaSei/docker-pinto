@@ -1,0 +1,14 @@
+[Unit]
+Description=pinto container
+Author=Avast Viruslab Systems
+After=docker.service
+
+[Service]
+TimeoutStartSec=0
+ExecStartPre=-/usr/bin/docker kill pintod
+ExecStartPre=-/usr/bin/docker rm pintod
+ExecStartPre=/usr/bin/docker avastsoftware/pinto
+ExecStart=/usr/bin/docker run --name pintod -v /var/lib/pinto:/var/lib/pinto -p3111:3111 avastsoftware/pinto
+
+[Install]
+WantedBy=multi-user.target
