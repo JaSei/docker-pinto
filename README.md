@@ -1,5 +1,7 @@
 # Running pinto with docker
 
+I propose to use https://github.com/JaSei/pinto-docker instead of this ancient repo.
+
 ## Installation
  * [Install Docker](https://docs.docker.com/installation/)
 
